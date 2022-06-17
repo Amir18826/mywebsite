@@ -1,0 +1,167 @@
+:root {
+  --green: #04aa6d;
+  --darkgray: #333;
+}
+body {
+  margin: 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*Start Nav */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--darkgray);
+  overflow: hidden;
+}
+.nav-search {
+  width: 150px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.nav-search:focus {
+  width: 100%;
+}
+ul.topnav li {
+  float: left;
+}
+ul.topnav li.right {
+  float: right;
+  padding: 0 3rem;
+}
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.topnav li a:hover:not(.active) {
+  background-color: #111;
+  color: var(--green);
+}
+ul.topnav li a.active {
+  background-color: var(--green);
+}
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {
+    float: none;
+  }
+}
+/*End Nav */
+/*Start home Section*/
+
+/*End home Section*/
+/*Start aboutUs Section*/
+div.background {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  margin-bottom: 0;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*End aboutUs Section*/
+/*Start Loan Section*/
+.inputstyle {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 1rem 0;
+  display: block;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#captcha {
+  height: 50%;
+  margin: auto;
+  display: block;
+}
+section.loan {
+  padding: 3rem;
+}
+.loan-container {
+  background-color: rgba(211, 211, 211, 0.397);
+  padding: 5px 20px 15px 20px;
+  border: 1px solid var(--green);
+  border-radius: 3px;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: var(--green);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: var(--darkgray);
+}
+/*End Loan Section*/
+.column {
+  box-sizing: border-box;
+  border: 3px solid var(--green);
+  padding: 2rem;
+}
+.button {
+  background-color: var(--green); /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button {
+  background-color: var(--darkgray);
+  color: var(--green);
+  border: 1px solid white;
+  border-radius: 25px;
+}
+.button:hover {
+  background-color: var(--green);
+  color: white;
+}
+/* Products page*/
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: var(--green);
+  padding: 2rem;
+  font-size: 32px;
+}

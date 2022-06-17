@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="/myFunctions.js"
+    ></script>
+  </head>
+  <body onload="createCaptcha()">
+    <nav>
+      <ul class="topnav">
+        <li><a class="active" href="./home.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./Req_Loan.html">Request Loan</a></li>
+        <li class="right"><a href="./aboutus.html">About Us</a></li>
+        <li>
+          <input
+            class="nav-search"
+            type="text"
+            name="search"
+            placeholder="Search.."
+          />
+        </li>
+      </ul>
+    </nav>
+    <section class="loan">
+      <div class="loan-container" style="font-weight: 600">
+        <div style="color: var(--green)">
+          <h1 style="font-size: 32px">Request Your Loan</h1>
+          <h3>Please Fill The Data Below :</h3>
+          <hr style="margin-bottom: 2rem" />
+        </div>
+        <form
+          name="form1"
+          onsubmit="validateCaptcha()"
+          action="result.html"
+          method="get"
+          style="color: var(--lightgray)"
+        >
+          <label for="fullname"><i class="fa fa-user"></i> Full Name</label>
+          <input
+            class="inputstyle"
+            required
+            type="text"
+            title="alphabet carecters ONLY, at least five chars"
+            pattern="[A-Za-z]{5,}+[ ]"
+            id="fullname"
+            name="fullname"
+            placeholder="Your Full name.."
+          />
+          <label for="nationalnumber"
+            ><i class="fa fa-address-card"></i> national number</label
+          >
+          <input
+            required
+            class="inputstyle"
+            type="number"
+            name="nationalnumber"
+            pattern="[]{11}"
+            id="nationalnumber"
+            placeholder="Your National number.."
+          />
+          <label for="date"><i class="fa fa-calendar"></i> Date of birth</label>
+          <input
+            class="inputstyle"
+            required
+            type="date"
+            name="date"
+            id="date"
+          />
+          <label for="mobilenumber"
+            ><i class="fa fa-phone"> </i> your mobile number</label
+          >
+          <input
+            class="inputstyle"
+            required
+            type="number"
+            name="mobilenumber"
+            id="mobilenumber"
+            placeholder="your mobile number.."
+          />
+          <label for="email"><i class="fa fa-at"></i> Email</label>
+          <input
+            class="inputstyle"
+            required
+            type="email"
+            placeholder="Your Email.."
+            id="email"
+            name="email"
+          />
+          <label for="amount"><i class="fa fa-dollar"></i> amount</label>
+          <input
+            class="inputstyle"
+            required
+            type="number"
+            min="1000000"
+            max="5000000"
+            id="amount"
+            name="amount"
+            placeholder="choose a number between 1 To 5 mililons.. "
+          />
+          <label for="loantype"><i class="fa fa-bank"></i> Loan Type</label>
+          <select class="inputstyle" required id="loantype" name="loantype">
+            <option value="saving 5% intrest">
+              حساب التوفير بفائدة سنوية خمسة بالمئة
+            </option>
+            <option value="ongoing">حساب جاري</option>
+            <option value="studentloan 10% intrest">
+              قرض تعليمي بفائدة سنوية عشرة بالمئة
+            </option>
+            <option value="resdentalloan 11% intrest">
+              قرض سكني بفائدة سنوية احدى عشر بالمئة
+            </option>
+            <option value="businessloan 10% intrest">
+              قرض تجاري بفائدة سنوية ثمانية عشر بالمئة
+            </option>
+            <option value="agriculturalloan 14% intrest">
+              قرض زراعي بفائدة سنوية اربعة عشر بالمئة
+            </option>
+            <option value="transportaionloan 12% intrest">
+              قرض النقل بفائدة سنوية اثنى عشر بالمئة
+            </option>
+            <option value="indusryloan 14% intrest">
+              قرض الورشات بفائدة سنوية اربعة عشر بالمئة
+            </option>
+          </select>
+          <label for="years"
+            ><i class="fa fa-calendar"></i> number of years</label
+          >
+          <select class="inputstyle" required name="years" id="years">
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+          <label for="paymethod"
+            ><i class="fa fa-paypal"></i> payment method</label
+          >
+          <select class="inputstyle" required name="paymethod" id="paymethod">
+            <option value="monthly">شهرية</option>
+            <option value="quarterly">ربعية</option>
+            <option value="yearly">سنوية</option>
+          </select>
+          <label for="cpatchaTextBox">Captcha</label>
+          <div class="captcha" id="captcha"></div>
+          <input
+            class="inputstyle"
+            type="text"
+            placeholder="Captcha"
+            id="cpatchaTextBox"
+          />
+          <input type="submit" value="Submit" onClick="testJS()" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright &copy; SVU.com</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="/myFunctions.js"
+    ></script>
+  </head>
+  <body style="background-color: var(--darkgray)">
+    <nav>
+      <ul class="topnav">
+        <li><a class="active" href="./home.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./Req_Loan.html">Request Loan</a></li>
+        <li class="right"><a href="./aboutus.html">About Us</a></li>
+        <li>
+          <input
+            class="nav-search"
+            type="text"
+            name="search"
+            placeholder="Search.."
+          />
+        </li>
+      </ul>
+    </nav>
+    <section class="products" style="color: white">
+      <div style="background-color: var(--green); padding: 3rem">
+        <h1 style="font-size: 64px; margin-bottom: 0">Our Services</h1>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+      </div>
+      <div
+        class="row"
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 3rem;
+        "
+      >
+        <div class="column">
+          <h1>حساب التوفير</h1>
+          <p>فائدة سنوية خمسة بالمئة</p>
+          <div class="overlay" id="overlay1" onclick="off1()">
+            <div id="text">فائدة سنوية خمسة بالمئة</div>
+          </div>
+          <button
+            onclick="on1()"
+            class="button button1"
+            style="font-weight: 600"
+          >
+            more info..
+          </button>
+        </div>
+        <div class="column">
+          <h1>حساب جاري</h1>
+          <p>حوِّل أموالك بسهولة</p>
+          <div class="overlay" id="overlay2" onclick="off2()">
+            <div id="text">
+              <p>إصدار بطاقة صراف آلي عبر أجهزة الخدمة الذاتية</p>
+              <p>الإيداع والتحويل الداخلي</p>
+              <p>سداد الفواتير و المدفوعات الحكومية</p>
+              <p>
+                إمكانية إجراء المعاملات المصرفية من خلال جميع القنوات
+                الإلكترونية
+              </p>
+            </div>
+          </div>
+          <button
+            onclick="on2()"
+            class="button button2"
+            style="font-weight: 600"
+          >
+            more info..
+          </button>
+        </div>
+      </div>
+      <div
+        class="row"
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 3rem;
+        "
+      >
+        <div class="column">
+          <h1>القرض التعليمي</h1>
+          <p>بفائدة سنوية عشرة بالمئة</p>
+          <div class="overlay" id="overlay3" onclick="off3()">
+            <div id="text">بفائدة سنوية عشرة بالمئة</div>
+          </div>
+          <button
+            onclick="on3()"
+            class="button button3"
+            style="font-weight: 600"
+          >
+            more info..
+          </button>
+        </div>
+        <div class="column">
+          <h1>القرض السكني</h1>
+          <p>بفائدة سنوية احد عشر بالمئة</p>
+          <div class="overlay" id="overlay4" onclick="off4()">
+            <div id="text">بفائدة سنوية احد عشر بالمئة</div>
+          </div>
+          <button
+            onclick="on4()"
+            class="button button4"
+            style="font-weight: 600"
+          >
+            more info..
+          </button>
+        </div>
+        <div class="column">
+          <h1>القرض التجاري</h1>
+          <p>بفائدة سنوية ثمانية عشرة بالمئة</p>
+          <div class="overlay" id="overlay5" onclick="off5()">
+            <div id="text">بفائدة سنوية ثمانية عشرة بالمئة</div>
+          </div>
+          <button
+            onclick="on5()"
+            class="button button5"
+            style="font-weight: 600"
+          >
+            more info..
+          </button>
+        </div>
+      </div>
+      <div
+        class="row"
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 3rem;
+        "
+      >
+        <div class="column">
+          <h1>القرض الرزراعي</h1>
+          <p>بفائدة سنوية اربعة عشر بالمئة</p>
+          <div class="overlay" id="overlay6" onclick="off6()">
+            <div id="text">بفائدة سنوية اربعة عشر بالمئة</div>
+          </div>
+          <button
+            onclick="on6()"
+            class="button button6"
+            style="font-weight: 600"
+          >
+            more info..
+          </button>
+        </div>
+        <div class="column">
+          <h1>قرض النقل</h1>
+          <p>بفائدة سنوية اثنى عشرة بالمئة</p>
+          <div class="overlay" id="overlay7" onclick="off7()">
+            <div id="text">بفائدة سنوية اثنى عشرة بالمئة</div>
+          </div>
+          <button
+            onclick="on7()"
+            class="button button7"
+            style="font-weight: 600"
+          >
+            more info..
+          </button>
+        </div>
+        <div class="column">
+          <h1>قرض الورشات</h1>
+          <p>بفائدة سنوية اربعة عشر بالمئة</p>
+          <div class="overlay" id="overlay8" onclick="off8()">
+            <div id="text">بفائدة سنوية اربعة عشر بالمئة</div>
+          </div>
+          <button
+            onclick="on8()"
+            class="button button8"
+            style="font-weight: 600"
+          >
+            more info..
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer style="color: white">
+      <p>Copyright &copy; SVU.com</p>
+    </footer>
+  </body>
+</html>
